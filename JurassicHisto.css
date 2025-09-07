@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Nestocopper42';
+    src: url('path/to/Nestocopper42.woff2') format('woff2'),
+         url('path/to/Nestocopper42.woff') format('woff'),
+         url('path/to/Nestocopper42.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Nestocopper42;
+}
+body{
+	background-image:url(img/Jurassicbg.jpg);
+	background-attachment: fixed;
+	background-size:cover;
+	background-position:center;
+}
+
+/*-----------------------------------NAVIGATION BAR-----------------------------------*/
+.navigation {
+	position: relative;
+	margin-left:auto;
+	margin-right: 2%;
+	width: auto;
+	min-width: 200px;
+	max-width: 624;
+	height: 50px;
+	background: rgba(0, 0, 0, 0.451);
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    position: fixed;         
+    top: 0;                
+    left: 0;
+    z-index: 1000;            
+    backdrop-filter: blur(10px); 
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .navigation {
+        max-width: 524px;
+        min-height: 50px;
+    }
+    nav a {
+        font-size: 1rem;
+        padding: 10px 8px;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .navigation {
+        max-width: 450px;
+        min-height: 45px;
+    }
+    nav a {
+        font-size: 0.9rem;
+        padding: 8px 6px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 481px) {
+    .navigation {
+        max-width: 350px;
+        min-width: 250px;
+        min-height: 42px;
+    }
+    nav a {
+        font-size: 0.85rem;
+        padding: 6px 4px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navigation {
+        max-width: 280px;
+        min-width: 200px;
+        min-height: 40px;
+        margin-right: 1%;
+    }
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px 2px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .navigation {
+        max-width: 240px;
+        min-width: 180px;
+        min-height: 38px;
+    }
+    nav a {
+        font-size: 0.7rem;
+        padding: 4px 1px;
+    }
+}
+
+nav a{
+	position: relative;
+	display: inline-block;
+	font-size: 1em;
+	color: aliceblue;
+	flex: 1;
+	text-decoration: none;
+	padding: 0 32px;
+	z-index: 1;
+	transition: .15s;
+}
+nav a:hover{
+	color: rgb(101, 27, 94);
+}
+nav span {
+    position: absolute;
+    top: 2px;                      
+    left: 76.5%;
+    width: 24%;
+    height: calc(100% - 4px);       
+    background: linear-gradient(45deg, rgb(51, 7, 102), rgb(118, 37, 164));
+    border-radius: 6px;
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);  
+    transform: translateX(0);       
+    z-index: 0;
+}
+
+nav a:nth-child(1):hover~span {
+    left: 0%;
+}
+nav a:nth-child(2):hover~span {
+    left: 24%;
+}
+nav a:nth-child(3):hover~span {
+    left: 50%;
+}
+nav a:nth-child(4):hover~span {
+    left: 76.5%;
+}
+
+/*----------------------------HISTORY-----------------------------*/
+.timeline-container{
+    font-family:poppins;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 25px auto; 
+	margin-top: 100px;
+}
+.timeline-event{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%; 
+}
+.timeline-date{
+    display: flex;
+    background: linear-gradient(to right,transparent 50%,rgb(79, 4, 111) 53%,rgb(79, 4, 111) 0,transparent 50%); 
+    order: 2;
+    text-align: center;
+    font-size: 28px;
+    color: #fff; 
+    width: 150px;
+}
+.timeline-date > span{
+    font-size: 30px;
+    margin: auto;
+    font-weight: 900;
+}
+.timeline-details{
+    text-align: top;
+    padding: 20px ;
+	padding-bottom: 40px;
+    color: #fff;
+    order: 3;
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 20px;
+    background: rgb(100, 17, 135);
+    margin-bottom: 10%; 
+}
+
+.timeline-details h2 {
+	font-family: 'Nestocopper42' cursive;
+	margin-bottom: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.timeline-details h3 {
+	margin: 5px;
+	font-size: 14px;
+	color: #1d2731;
+}
+.timeline-details p{
+    font-size: 12px;
+}
+
+@media (min-width: 740px){
+    .timeline-details,
+    .blank-box{
+        width: 40%; 
+    }
+    .right-side .timeline-details{
+        order: 1;
+        padding-right: 10px;
+    }
+    .right-side .blank-box{
+        order: 3; 
+    }
+}
+
+
+
+
+/*----------------------------------FOOTER--------------------------------*/
+footer{
+	background-color: rgb(79, 4, 111);
+}
+.footerContainer{
+	width: 100%;
+	padding: -15px 30px 30px;
+	margin-top: 80px;
+}
+.footer-icon{
+	display: flex;
+	justify-content: center;
+}
+.footer-icon a{
+	text-decoration: none;
+	padding: 10px;
+	background-color: rgb(123, 62, 149);
+	margin: 10px;
+	border-radius: 50%;
+}
+.footer-icon a i{
+	font-size: 1.2em;
+	color: rgb(14, 15, 15);
+}
+.footer-icon a:hover{
+	background-color: rgb(57, 0, 82);
+    transition: 0.5s;
+}
+.foot-text{
+	background-color: rgb(79, 4, 111);
+	padding: 20px;
+	text-align: center;
+}
+.foot-text p{
+	color: rgb(27, 25, 25);
+}
+.designer{
+	opacity: 0.7;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	margin: 0px 5px;
+}

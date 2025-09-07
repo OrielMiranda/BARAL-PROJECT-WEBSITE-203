@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Life Before Humanity</title>
+    <link rel="stylesheet" text="text/css" href="about.css">
+	<link rel="stylesheet" href="webfonts/css/all.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navigation">
+		  <nav><ul>
+		  <a href="index.html">Home</a>
+		  <a href="about.html">About</a>
+		  <a href="gallery.html">Gallery</a>
+		  <a href="Topic.html">Topic</a>
+		  <span></span>
+	  </ul></nav>
+  </div></div>
+
+<div class="content-wrapper">
+    <div class="AboutText">
+        <h1>About This Website</h1><br>
+        <p>Welcome to our journey through deep time, where we explore the fascinating world of the 
+            Mesozoic Era. This website is about the history of Mesozoic Era spanning over a
+            million of the Mesozoic Era divided into three periods, the Triassic, Jurassic, and Creraceous. It 
+            was a time of dramatic evolutionary change and the rise od Earth's most iconic prehistoric creature.
+            From the first small, dipedal dinosaurs of the Triassic to the towering giants of the Jurassic and diversa,
+            of bizarre species of the Cretaceous, this era shaped the course of life on our planet. Our mission is to bring
+            the acient world to life, uncovering the science, stories, and discoveries that continue to transform our
+            understanding of dinosaurs and the environments they once ruled.
+        </p>
+    </div>
+    <div class="containers">
+        <div class="card" style="background-image: url(img/about1.jpg)"></div>
+        <div class="card" style="background-image: url(img/about2.jpg)"></div>
+        <div class="card" style="background-image: url(img/about3.jpg)"></div>
+        <div class="card" style="background-image: url(img/about4.jpg)"></div>
+        <div class="card" style="background-image: url(img/about5.jpg)"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+
+                if (this.classList.contains('expanded')) {
+
+                    this.classList.remove('expanded');
+                } else {
+
+                    cards.forEach(c => c.classList.remove('expanded'));
+                    this.classList.add('expanded');
+                }
+            });
+        });
+    });
+    </script>
+
+	
+	<footer>
+		<div class="footerContainer">
+	   
+		  <div class="footer-icon">
+<a href="https://www.facebook.com/oriel.miranda.2024?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy-link&utm_content=u27vma4"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@orielmiranda725?_t=ZS-8zKbXn77D8O&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+<a href="https://www.youtube.com/@orielmirandabaral?si=6bFfihs8k3LG_bg_"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+		 <div class="foot-text">
+	   <p>THIS WEBSITE IS FOR PROJECT PURPOSES ONLY</p>
+		 </div>
+	   </div>
+		 </div>
+	   </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>Life Before Humanity</title>
+    <link rel="stylesheet" text="text/css" href="gallery.css">
+	<link rel="stylesheet" href="webfonts/css/all.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navigation">
+		  <nav><ul>
+		  <a href="index.html">Home</a>
+		  <a href="about.html">About</a>
+		  <a href="gallery.html">Gallery</a>
+		  <a href="Topic.html">Topic</a>
+		  <span></span>
+	  </ul></nav>
+  </div></div>
+
+	
+<div class="slider-container">
+
+        <div class="slide">
+
+            
+            <div class="item" style="background-image: url(img/gallery1.jpg);">
+                <div class="content">
+                    <div class="name">Ancient Survivors</div>
+                    <div class="des">Before humans dreamed of history, dinosaurs wrote it in stone.</div>
+          
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/gallery2.jpg);">
+                <div class="content">
+                    <div class="name">Age of Giants</div>
+                    <div class="des">The world once belonged to creatures so vast, their footsteps shook the earth.</div>
+               
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/gallery3.jpg);">
+                <div class="content">
+                    <div class="name">Cretaceous Twilight</div>
+                    <div class="des">The reign of dinosaurs ended not with defeat, but with the sky itself falling.</div>
+              
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/gallery4.jpg);">
+                <div class="content">
+                    <div class="name">Triassic Dawn</div>
+                    <div class="des">From small beginnings came predators that ruled for millions of years</div>
+              
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/gallery5.jpg);">
+                <div class="content">
+                    <div class="name">Jurassic Kingdom</div>
+                    <div class="des">Forests echoed with the thunder of giants, each day a struggle for survival.</div>
+                
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/gallery6.jpg);">
+                <div class="content">
+                    <div class="name">Fossil Whispers</div>
+                    <div class="des">Bones in the ground are time’s way of telling us that nothing lasts forever.</div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+
+  
+	<footer>
+		<div class="footerContainer">
+
+<div class="footer-icon">
+<a href="https://www.facebook.com/oriel.miranda.2024?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy-link&utm_content=u27vma4"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@orielmiranda725?_t=ZS-8zKbXn77D8O&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+<a href="https://www.youtube.com/@orielmirandabaral?si=6bFfihs8k3LG_bg_"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+		 <div class="foot-text">
+	   <p>THIS WEBSITE IS FOR PROJECT PURPOSES ONLY</p>
+		 </div>
+	   </div>
+		 </div>
+	   </footer>
+
+
+
+	   <script>
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+let autoSlideInterval;
+
+
+function nextSlide() {
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+}
+
+
+function prevSlide() {
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1])
+}
+
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 8000);
+}
+
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+
+function restartAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+}
+
+next.addEventListener('click', function(){
+    nextSlide();
+    restartAutoSlide(); 
+})
+
+prev.addEventListener('click', function(){
+    prevSlide();
+    restartAutoSlide(); 
+})
+
+
+startAutoSlide();
+
+
+document.querySelector('.slider-container').addEventListener('mouseenter', stopAutoSlide);
+document.querySelector('.slider-container').addEventListener('mouseleave', startAutoSlide);
+</script>
+
+
+</body>
+</html>
